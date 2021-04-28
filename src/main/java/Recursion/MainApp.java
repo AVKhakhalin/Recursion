@@ -2,6 +2,8 @@ package Recursion;
 
 public class MainApp
 {
+    static long curTime;
+
     public static void main(String[] args)
     {
         System.out.println("Домашнее задание №5 студента университета GeekBrains Хахалина Андрея Владимировича");
@@ -24,7 +26,7 @@ public class MainApp
         // Пример бесконечной рекурсии
 //        infinityLoops.loopInfinity(100);
         // Пример обычной рекурсии с условием для выхода
-        infinityLoops.loopFinal(100);
+//        infinityLoops.loopFinal(100);
         //endregion-------------------------------------------------------
 
         //region Решение задания 5.3
@@ -49,12 +51,18 @@ public class MainApp
         Реализуйте простой алгоритм, использующий цикл и простой алгоритм, использующий рекурсию.
         Оцените два алгоритма с помощью базового метода System.nanoTime(). */
 
+        CompareLoop compareLoop = new CompareLoop();
+        curTime = System.nanoTime();
+        System.out.println("С помощью циклов получено " + compareLoop.loopResult(1000) + " за " + (System.nanoTime() - curTime) + " нс.");
+        compareLoop.setResult(1);
+        System.out.println("С помощью рекурсии получено " + compareLoop.recursionResult(1000) + " за " + (System.nanoTime() - curTime) + " нс.");
         //endregion-------------------------------------------------------
 
         //region Решение задания 5.5
         /* Задание 5.5
         Реализуйте алгоритм двоичного рекурсивного поиска на основе массива из задания 2.1.
         Оцените алгоритм двоичного рекурсивного поиска с помощью базового метода System.nanoTime() и сравните с обычным двоичным поиском. */
+
 
         //endregion-------------------------------------------------------
 
