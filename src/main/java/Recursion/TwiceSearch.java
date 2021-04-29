@@ -25,11 +25,13 @@ public class TwiceSearch
                     if (array[i] == array[j])
                     {
                         exitCikl = false;
+                        break;
                     }
                 }
             }
         }
         Arrays.sort(array);
+        System.out.println("Массив для поиска элемента: " + Arrays.toString(array));
     }
 
     public int[] getArray()
@@ -44,7 +46,6 @@ public class TwiceSearch
         int begin = 0;
         int end = array.length - 1;
         int middle = array.length / 2;
-        System.out.println("Массив для поиска элемента: " + Arrays.toString(array));
         while (exit == false)
         {
             if (keyNumber == array[middle])
