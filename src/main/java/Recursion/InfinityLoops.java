@@ -2,12 +2,12 @@ package Recursion;
 
 public class InfinityLoops
 {
-    public int loopInfinity(int n)
+    public int loopInfinity(int n) // Бесконечная рекурсия
     {
         return loopInfinity(1);
     }
 
-    public int loopFinal(int n)
+    public int loopFinal(int n) // Конечная рекурсия с базовым случаем
     {
         if (n < 2)
         {

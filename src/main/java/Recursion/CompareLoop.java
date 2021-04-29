@@ -9,7 +9,7 @@ public class CompareLoop
         this.result = result;
     }
 
-    public double loopResult(int loops)
+    public double loopResult(int loops) // Применение циклов
     {
         for (int i = 0; i < loops; i++)
         {
@@ -18,7 +18,7 @@ public class CompareLoop
         return this.result;
     }
 
-    public double recursionResult(int loops)
+    public double recursionResult(int loops) // Применение рекурсии
     {
         this.result *= 2;
         if (loops <= 0)

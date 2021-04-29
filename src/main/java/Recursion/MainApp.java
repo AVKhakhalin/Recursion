@@ -1,5 +1,7 @@
 package Recursion;
 
+import java.util.Arrays;
+
 public class MainApp
 {
     static long curTime;
@@ -63,13 +65,24 @@ public class MainApp
         Реализуйте алгоритм двоичного рекурсивного поиска на основе массива из задания 2.1.
         Оцените алгоритм двоичного рекурсивного поиска с помощью базового метода System.nanoTime() и сравните с обычным двоичным поиском. */
 
+        int numberToSearch = 9; // Установка числа для поиска
+        TwiceSearch twiceSearch = new TwiceSearch(numberToSearch + 1); // Создание массива
 
+        // Реализация обчыного двоичного поиска
+        System.out.println(twiceSearch.classicTwiceSearch(numberToSearch));
+        // Реализация рекурсивного двоичного поиска
+        curTime = System.nanoTime();
+        System.out.println("Индекс элемента \"" + numberToSearch + "\" в массиве - " + twiceSearch.recursionTwiceSearch(numberToSearch, 0, twiceSearch.getArray().length - 1) + ", определён рекурсивным двоичным поиском за " + (System.nanoTime() - curTime) + " нс.");
         //endregion-------------------------------------------------------
 
         //region Решение задания 5.6
         /* Задание 5.6
         На основе массива из задания 2.1 реализуйте алгоритм сортировки слиянием.
         Оцените алгоритм сортировки слиянием с помощью базового метода System.nanoTime() и сравните с сортировкой методом sort(). */
+
+        numberToSearch = 9; // Установка числа для поиска
+        ConfluenceSearch confluenceSearch = new ConfluenceSearch(numberToSearch + 1);
+
 
         //endregion-------------------------------------------------------
     }
